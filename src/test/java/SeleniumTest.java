@@ -12,7 +12,8 @@ import java.io.File;
 public class SeleniumTest {
 
     private WebDriver webDriver;
-
+    private String path;
+    
     @BeforeEach
     public void setUp() {
        
@@ -21,7 +22,7 @@ public class SeleniumTest {
 
         // Get file
         File file = new File("src/main/java/com/revature/index.html");
-        String path = "file://" + file.getAbsolutePath();
+        path = "file://" + file.getAbsolutePath();
 
         // Create a new ChromeDriver instance
         ChromeOptions options = new ChromeOptions();
